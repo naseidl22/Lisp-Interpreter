@@ -1,0 +1,11 @@
+Sexpr => Atom | List
+
+List => '(' Concs ')'
+
+Cdr => Concs | NIL
+
+Concs => Sexpr  Cdr
+
+Atom => Number | Symbol | String | NIL
+
+NIL => epsilon

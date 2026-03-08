@@ -1,0 +1,222 @@
+BEGIN TEST FILE
+
+Variable a = 18; Variable b = 31  
+
+--MATH OPERATIONS TEST CASES--    
+
+TEST: (add a b) = 49
+PASSED
+
+TEST: (sub a b) = -13
+PASSED
+
+TEST: (mul a b) = 558
+PASSED
+
+TEST: (div 15 5) = 3
+PASSED
+
+TEST: (mod b a) = 13
+PASSED
+
+
+--COMPARISON OPERATOR TEST CASES--
+
+TEST: (eq 5 5) returns -> true    
+PASSED
+
+TEST: (eq 15 5) returns -> ()
+PASSED
+
+TEST: (eq 'hello' 'hello') returns -> true
+PASSED
+
+TEST: (eq 'hello' 'world') returns -> ()
+PASSED
+
+TEST: (eq a b) returns -> ()
+PASSED
+
+TEST: (lt 5 10) returns -> true
+PASSED
+
+TEST: (lt 15 10) returns -> ()
+PASSED
+
+TEST: (lt 10 10) returns -> ()
+PASSED
+
+TEST: (lt a b) returns -> true
+PASSED
+
+TEST: (lte 5 10) returns -> true
+PASSED
+
+TEST: (lte 15 10) returns -> ()
+PASSED
+
+TEST: (lte 10 10) returns -> true
+PASSED
+
+TEST: (lte a b) returns -> true
+PASSED
+
+TEST: (gt 5 10) returns -> ()
+PASSED
+
+TEST: (gt 15 10) returns -> true
+PASSED
+
+TEST: (gt 10 10) returns -> ()
+PASSED
+
+TEST: (gt a b) returns -> ()
+PASSED
+
+TEST: (gte 5 10) returns -> ()
+PASSED
+
+TEST: (gte 15 10) returns -> true
+PASSED
+
+TEST: (gte 10 10) returns -> true
+PASSED
+
+TEST: (gte a b) returns -> ()
+PASSED
+
+
+--LOGIC OPERATOR TEST CASES--
+
+TEST: (and (eq 1 1) (eq 1 1)) returns -> true
+PASSED
+
+TEST: (and (eq 1 1) (eq 0 1)) returns -> ()
+PASSED
+
+TEST: (and (eq 0 1) (eq 1 1) ) returns -> ()
+PASSED
+
+TEST: (and (eq 0 1) (eq 0 1)) returns -> ()
+PASSED
+
+TEST: (or (eq 1 1) (eq 1 1)) returns -> true
+PASSED
+
+TEST: (or (eq 1 1) (eq 0 1)) returns -> true
+PASSED
+
+TEST: (or (eq 0 1) (eq 1 1)) returns -> true
+PASSED
+
+TEST: (or (eq 0 1) (eq 0 1)) returns -> ()
+PASSED
+
+TEST: (not (eq 0 1)) returns -> true
+PASSED
+
+TEST: (not (eq 1 1)) returns -> ()
+PASSED
+
+
+--TYPE CHECK TEST CASES--
+
+TEST: (NUMBER? 1) returns -> true
+PASSED
+
+TEST: (NUMBER? '1') returns -> ()
+PASSED
+
+TEST: (NIL? (eq 0 1)) returns -> true
+PASSED
+
+TEST: (NIL? ()) returns -> true
+PASSED
+
+TEST: (NIL? (eq 1 1)) returns -> ()
+PASSED
+
+TEST: (SYMBOL? 1) returns -> ()
+PASSED
+
+TEST: (SYMBOL? (quote my_symbol)) returns -> true
+PASSED
+
+TEST: (LIST? 1) returns -> ()
+PASSED
+
+TEST: (LIST? (quote (1 2 3))) returns -> true
+PASSED
+
+
+--MISC. REQUIRED COMMANDS TEST CASES--
+
+TEST: (set myNumber 5) -> saves correct value
+PASSED
+
+TEST: (set myString 'hello world') -> saves correct value
+PASSED
+
+TEST: (set myList (quote (1 2 3))) -> doesn't fail (see next tests)
+PASSED
+
+TEST: (car myList) = 1
+PASSED
+
+TEST: (cdr myList) = (2 3) PASSED IF PRINT OUT IS (2.000 3.000)
+( 2.000000 3.000000   )
+PASSED
+
+TEST: (car (cdr myList)) = 2
+PASSED
+
+TEST: (cons (quote (1 2 3)) (quote (4 5 6)) ) -> ((1 2 3) 4 5 6)
+( ( 1.000000 2.000000 3.000000   ) 4.000000 5.000000 6.000000   )
+PASSED
+
+TEST: (if (eq 1 1) 1 0) = 1
+PASSED
+
+TEST: (if (eq 0 1) 1 0) = 0
+PASSED
+
+
+--USER DEFINED FUNCTIONS TEST CASES--
+
+TEST: (defun square (x) (mul x x)) -> returns square of x
+(square 1) = ...
+1.000000
+(square 5) = ...
+25.000000
+PASSED
+
+TEST: (defun addSquare (num1 num2) (add (mul num1 num1) (mul num2 num2 ))) -> returns the sum of two squared numbers
+(addSquare 3 5) = ...
+34.000000
+(addSquare 12 4) = ...
+160.000000
+PASSED
+
+TEST: (eval (quote (square 8))) = 64
+PASSED
+
+FINAL TEST RECURSIVE FUNCTION USING COND
+------------------------
+Fibonacci Numbers Function
+------------------------
+(defun fib (n) (cond ((eq n 0) 0) ((eq n 1) 1) ((quote t) (add (fib (sub n 1) ) (fib (sub n 2)) ))))
+
+TEST:  fib(0) = 0
+PASSED
+
+TEST:  fib(1) = 1
+PASSED
+
+TEST:  fib(2) = 1
+PASSED
+
+TEST:  fib(13) = 233
+PASSED
+
+
+END OF TESTING

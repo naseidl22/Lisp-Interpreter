@@ -1,0 +1,306 @@
+(print "BEGIN TEST FILE")
+(set a 18)
+(set b 31)
+(print "")
+(print "Variable a = 18; Variable b = 31")
+(print "")
+(print "--MATH OPERATIONS TEST CASES--")
+(print "")
+
+
+(print "TEST: (add a b) = 49")
+(if (eq (add a b) 49) (print "PASSED") (print "FAILED"))
+(print "")
+
+(print "TEST: (sub a b) = -13")
+(if (eq (sub a b) -13) (print "PASSED") (print "FAILED"))
+(print "")
+
+(print "TEST: (mul a b) = 558")
+(if (eq (mul a b) 558) (print "PASSED") (print "FAILED"))
+(print "")
+
+(print "TEST: (div 15 5) = 3")
+(if (eq (div 15 5) 3) (print "PASSED") (print "FAILED"))
+(print "")
+
+(print "TEST: (mod b a) = 13")
+(if (eq (mod b a) 13) (print "PASSED") (print "FAILED"))
+(print "")
+
+(print "")
+(print "--COMPARISON OPERATOR TEST CASES--")
+(print "")
+
+(print "TEST: (eq 5 5) returns -> true")
+(if (eq 5 5) (print "PASSED") (print "FAILED"))
+(print "")
+
+(print "TEST: (eq 15 5) returns -> ()")
+(if (eq 15 5) (print "FAILED") (print "PASSED"))
+(print "")
+
+(print "TEST: (eq 'hello' 'hello') returns -> true")
+(if (eq "hello" "hello") (print "PASSED") (print "FAILED"))
+(print "")
+
+(print "TEST: (eq 'hello' 'world') returns -> ()")
+(if (eq "hello" "world")(print "FAILED") (print "PASSED"))
+(print "")
+
+(print "TEST: (eq a b) returns -> ()")
+(if (eq a b) (print "FAILED") (print "PASSED"))
+(print "")
+
+(print "TEST: (lt 5 10) returns -> true")
+(if (lt 5 10) (print "PASSED") (print "FAILED"))
+(print "")
+
+(print "TEST: (lt 15 10) returns -> ()")
+(if (lt 15 10)  (print "FAILED") (print "PASSED"))
+(print "")
+
+(print "TEST: (lt 10 10) returns -> ()")
+(if (lt 10 10)  (print "FAILED") (print "PASSED"))
+(print "")
+
+(print "TEST: (lt a b) returns -> true")
+(if (lt a b) (print "PASSED") (print "FAILED"))
+(print "")
+
+(print "TEST: (lte 5 10) returns -> true")
+(if (lte 5 10) (print "PASSED") (print "FAILED"))
+(print "")
+
+(print "TEST: (lte 15 10) returns -> ()")
+(if (lte 15 10)  (print "FAILED") (print "PASSED"))
+(print "")
+
+(print "TEST: (lte 10 10) returns -> true")
+(if (lte 10 10) (print "PASSED") (print "FAILED") )
+(print "")
+
+(print "TEST: (lte a b) returns -> true")
+(if (lte a b) (print "PASSED") (print "FAILED"))
+(print "")
+
+(print "TEST: (gt 5 10) returns -> ()")
+(if (gt 5 10) (print "FAILED") (print "PASSED") )
+(print "")
+
+(print "TEST: (gt 15 10) returns -> true")
+(if (gt 15 10) (print "PASSED") (print "FAILED") )
+(print "")
+
+(print "TEST: (gt 10 10) returns -> ()")
+(if (gt 10 10)  (print "FAILED") (print "PASSED"))
+(print "")
+
+(print "TEST: (gt a b) returns -> ()")
+(if (gt a b) (print "FAILED") (print "PASSED") )
+(print "")
+
+(print "TEST: (gte 5 10) returns -> ()")
+(if (gte 5 10) (print "FAILED") (print "PASSED") )
+(print "")
+
+(print "TEST: (gte 15 10) returns -> true")
+(if (gte 15 10) (print "PASSED") (print "FAILED") )
+(print "")
+
+(print "TEST: (gte 10 10) returns -> true")
+(if (gte 10 10) (print "PASSED") (print "FAILED") )
+(print "")
+
+(print "TEST: (gte a b) returns -> ()")
+(if (gte a b) (print "FAILED") (print "PASSED") )
+(print "")
+
+(print "")
+(print "--LOGIC OPERATOR TEST CASES--")
+(print "")
+
+
+(print "TEST: (and (eq 1 1) (eq 1 1)) returns -> true")
+(if (and (eq 1 1) (eq 1 1)) (print "PASSED") (print "FAILED") )
+(print "")
+
+(print "TEST: (and (eq 1 1) (eq 0 1)) returns -> ()")
+(if (and (eq 1 1) (eq 0 1)) (print "FAILED") (print "PASSED") )
+(print "")
+
+(print "TEST: (and (eq 0 1) (eq 1 1) ) returns -> ()")
+(if (and (eq 0 1) (eq 1 1) ) (print "FAILED") (print "PASSED") )
+(print "")
+
+(print "TEST: (and (eq 0 1) (eq 0 1)) returns -> ()")
+(if (and (eq 0 1) (eq 0 1)) (print "FAILED") (print "PASSED") )
+(print "")
+
+(print "TEST: (or (eq 1 1) (eq 1 1)) returns -> true")
+(if (or (eq 1 1) (eq 1 1)) (print "PASSED") (print "FAILED") )
+(print "")
+
+(print "TEST: (or (eq 1 1) (eq 0 1)) returns -> true")
+(if (or (eq 1 1) (eq 0 1))  (print "PASSED")  (print "FAILED"))
+(print "")
+
+(print "TEST: (or (eq 0 1) (eq 1 1)) returns -> true")
+(if (or (eq 0 1) (eq 1 1))  (print "PASSED")  (print "FAILED"))
+(print "")
+
+(print "TEST: (or (eq 0 1) (eq 0 1)) returns -> ()")
+(if (or (eq 0 1) (eq 0 1)) (print "FAILED") (print "PASSED") )
+(print "")
+
+(print "TEST: (not (eq 0 1)) returns -> true")
+(if (not (eq 0 1)) (print "PASSED") (print "FAILED") )
+(print "")
+
+(print "TEST: (not (eq 1 1)) returns -> ()")
+(if (not (eq 1 1)) (print "FAILED")  (print "PASSED") )
+(print "")
+
+(print "")
+(print "--TYPE CHECK TEST CASES--")
+(print "")
+
+(print "TEST: (NUMBER? 1) returns -> true")
+(if (NUMBER? 1) (print "PASSED") (print "FAILED") )
+(print "")
+
+(print "TEST: (NUMBER? '1') returns -> ()")
+(if (NUMBER? "1") (print "FAILED")  (print "PASSED") )
+(print "")
+
+(print "TEST: (NIL? (eq 0 1)) returns -> true")
+(if (NIL? (eq 0 1)) (print "PASSED") (print "FAILED") )
+(print "")
+
+(print "TEST: (NIL? ()) returns -> true")
+(if (NIL? ()) (print "PASSED") (print "FAILED") )
+(print "")
+
+(print "TEST: (NIL? (eq 1 1)) returns -> ()")
+(if (NIL? (eq 1 1)) (print "FAILED")  (print "PASSED") )
+(print "")
+
+(print "TEST: (SYMBOL? 1) returns -> ()")
+(if (SYMBOL? 1)  (print "FAILED") (print "PASSED") )
+(print "")
+
+(print "TEST: (SYMBOL? (quote my_symbol)) returns -> true")
+(if (SYMBOL? (quote my_symbol)) (print "PASSED") (print "FAILED")  )
+(print "")
+
+(print "TEST: (LIST? 1) returns -> ()")
+(if (LIST? 1)  (print "FAILED") (print "PASSED") )
+(print "")
+
+(print "TEST: (LIST? (quote (1 2 3))) returns -> true")
+(if (LIST? (quote (1 2 3))) (print "PASSED") (print "FAILED")  )
+(print "")
+
+(print "")
+(print "--MISC. REQUIRED COMMANDS TEST CASES--")
+(print "")
+
+(print "TEST: (set myNumber 5) -> saves correct value")
+(set myNumber 5) 
+(if (eq myNumber 5) (print "PASSED") (print "FAILED")  )
+(print "")
+
+(print "TEST: (set myString 'hello world') -> saves correct value")
+(set myString "hello world")
+(if (eq myString "hello world") (print "PASSED") (print "FAILED")  )
+(print "")
+
+(print "TEST: (set myList (quote (1 2 3))) -> doesn't fail (see next tests)")
+(set myList (quote (1 2 3)))
+(if (set myLIst (quote (1 2 3))) (print "PASSED") (print "FAILED")  )
+(print "")
+
+(print "TEST: (car myList) = 1")
+(if (eq 1 (car myList)) (print "PASSED") (print "FAILED")  )
+(print "")
+
+(print "TEST: (cdr myList) = (2 3) PASSED IF PRINT OUT IS (2.000 3.000)")
+(print (cdr myList))
+(print "PASSED")
+(print "")
+
+(print "TEST: (car (cdr myList)) = 2")
+(if (eq 2 (car (cdr myList))) (print "PASSED") (print "FAILED")  )
+(print "")
+
+
+(print "TEST: (cons (quote (1 2 3)) (quote (4 5 6)) ) -> ((1 2 3) 4 5 6) ")
+(print (cons (quote (1 2 3)) (quote (4 5 6)) ))
+(print "PASSED")
+(print "")
+
+(print "TEST: (if (eq 1 1) 1 0) = 1")
+(if (eq 1 (if (eq 1 1) 1 0)) (print "PASSED") (print "FAILED")  )
+(print "")
+
+(print "TEST: (if (eq 0 1) 1 0) = 0")
+(if (eq 0 (if (eq 0 1) 1 0)) (print "PASSED") (print "FAILED")  )
+(print "")
+
+(print "")
+(print "--USER DEFINED FUNCTIONS TEST CASES--")
+(print "")
+
+
+
+(print "TEST: (defun square (x) (mul x x)) -> returns square of x ")
+(defun square (x) (mul x x))
+(print "(square 1) = ...")
+(print (square 1))
+(print "(square 5) = ...")
+(print (square 5))
+(if (and (eq 1 (square 1)) (eq 25 (square 5)) ) (print "PASSED") (print "FAILED"))
+(print "")
+
+(print "TEST: (defun addSquare (num1 num2) (add (mul num1 num1) (mul num2 num2 ))) -> returns the sum of two squared numbers ")
+(defun addSquare (num1 num2) (add (mul num1 num1) (mul num2 num2 )))
+(print "(addSquare 3 5) = ...")
+(print(addSquare 3 5))
+(print "(addSquare 12 4) = ...")
+(print (addSquare 12 4))
+(if (and (eq 34 (addSquare 3 5)) (eq 160 (addSquare 12 4)) ) (print "PASSED") (print "FAILED"))
+(print "")
+
+
+
+(print "TEST: (eval (quote (square 8))) = 64")
+(if (eq 64 (eval (quote (square 8)))) (print "PASSED") (print "FAILED")  )
+(print "")
+
+(print "FINAL TEST RECURSIVE FUNCTION USING COND")
+(print "------------------------")
+(print "Fibonacci Numbers Function")
+(print "------------------------")
+(print "(defun fib (n) (cond ((eq n 0) 0) ((eq n 1) 1) ((quote t) (add (fib (sub n 1) ) (fib (sub n 2)) ))))")
+(defun fib (n) (cond ((eq n 0) 0) ((eq n 1) 1) ((quote t) (add (fib (sub n 1) ) (fib (sub n 2)) ))))
+(print "")
+
+(print "TEST:  fib(0) = 0")
+(if (eq 0 (fib 0)) (print "PASSED") (print "FAILED")  )
+(print "")
+
+(print "TEST:  fib(1) = 1")
+(if (eq 1 (fib 1)) (print "PASSED") (print "FAILED")  )
+(print "")
+
+(print "TEST:  fib(2) = 1")
+(if (eq 1 (fib 2)) (print "PASSED") (print "FAILED")  )
+(print "")
+
+(print "TEST:  fib(13) = 233")
+(if (eq 233 (fib 13)) (print "PASSED") (print "FAILED")  )
+(print "")
+
+(print "")
+(print "END OF TESTING")
+(print "")
